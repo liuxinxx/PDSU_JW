@@ -270,7 +270,7 @@ public class laoshi {
 							} else {
 								map.put("Tzh", nj + entry.getValue() + x + k);
 							}
-							map.put("Tmm", "123456");
+							map.put("Tmm", "******");//password
 							String result = laoshi.sendHttpClientPost(path, map, encode);
 							Document doc = Jsoup.parse(result);
 							Elements url = doc.select("#showD");
