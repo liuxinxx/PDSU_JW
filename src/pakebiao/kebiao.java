@@ -221,13 +221,13 @@ public class kebiao {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String Mysql = "com.mysql.jdbc.Driver";
-		String Sqlstr = "jdbc:mysql://139.129.46.146:3306/pdsu_Student?characterEncoding=utf-8";
+		String Sqlstr = "jdbc:mysql://××××××:××××/table?characterEncoding=utf-8";
 		java.sql.Statement stat = null;
 		String xh = "";
 		Connection conn = null;
 		try {
 			Class.forName(Mysql);
-			conn = DriverManager.getConnection(Sqlstr, "root", "0806");
+			conn = DriverManager.getConnection(Sqlstr, "username", "password");
 
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -264,9 +264,9 @@ public class kebiao {
 						 map.put("Tzh", nj + entry.getValue() + x + k);
 						 xh = nj + entry.getValue() + x + k;
 						 }
-//						map.put("Tzh", "141210135");
-//						xh = "141210135";
-						map.put("Tmm", "123456");
+//						map.put("Tzh", "××××××");//学号
+//						xh = "-------";//学号
+						map.put("Tmm", "*****");//密码
 						Name = "";
 						String result = kebiao.sendHttpClientPost(path, map, encode);
 						String text = "";
